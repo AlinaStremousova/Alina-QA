@@ -25,3 +25,4 @@ class User:
 
         assert user.second_name == "Stremousova"
         user.remove()
+        
