@@ -21,6 +21,7 @@ class Card(BasePage):
         checkout_button = self.driver.find_element(By.ID, self.CHECKOUT_BUTTON)
         checkout_button.click()
 
+
 class InventoryPage(BasePage):
     URL = "https://www.saucedemo.com/inventory.html"
     ADD_TO_CART_BUTTON_ID = "add-to-cart-sauce-labs-backpack"

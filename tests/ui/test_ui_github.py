@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 def test_check_incorrect_username():
     # Створення об'єкту для керування браузером
     driver = webdriver.Chrome(
-        service=Service(r'C:\\Users\\38098\\Alina-QA' + r'chromedriver.exe')
+        service=Service('C:\\Users\\38098\\Alina-QA\\' + r'chromedriver.exe')
     )
 
     # Відкриваємо сторінку

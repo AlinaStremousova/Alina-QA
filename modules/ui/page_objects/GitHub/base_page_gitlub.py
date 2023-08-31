@@ -3,7 +3,7 @@ from selenium import webdriver
 
 
 class BasePage:
-    PATH = r"C:\\Users\\38098\\Alina-QA"
+    PATH = "C:\\Users\\38098\\Alina-QA\\"
     DRIVER_NAME = "chromedriver.exe"
 
     def __init__(self) -> None:

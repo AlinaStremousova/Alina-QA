@@ -5,10 +5,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import pytest
 
-driver = webdriver.Chrome(service=Service(BasePage.PATH + BasePage.DRIVER_NAME))
 
 @pytest.mark.ui
 def test_check_correct_username():
+    driver = webdriver.Chrome(service=Service(BasePage.PATH + BasePage.DRIVER_NAME))
     sign_in_page = SignInPage(driver=driver)
     sign_in_page.go_to()
     sign_in_page.try_login("standard_user", "secret_sauce")
@@ -16,6 +16,7 @@ def test_check_correct_username():
 
 @pytest.mark.ui
 def test_check_card():
+    driver = webdriver.Chrome(service=Service(BasePage.PATH + BasePage.DRIVER_NAME))
     login_page = SignInPage(driver=driver)
     login_page.go_to()
     login_page.try_login("standard_user", "secret_sauce")
