@@ -1,4 +1,4 @@
-from modules.ui.page_objects.GitHub.base_page_gitlub import BasePage
+from modules.ui.page_objects.GitHub.base_page_github import BasePage
 from selenium.webdriver.common.by import By
 
 

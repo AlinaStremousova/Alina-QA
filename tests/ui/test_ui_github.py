@@ -3,13 +3,17 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+import os
+from config.config import ROOT_DIR, DRIVER_NAME
 
 
 @pytest.mark.ui
 def test_check_incorrect_username():
     # Створення об'єкту для керування браузером
+
+    CHROMEDRIVER_PATH = os.path.join(ROOT_DIR, DRIVER_NAME)
     driver = webdriver.Chrome(
-        service=Service('C:\\Users\\38098\\Alina-QA\\' + r'chromedriver.exe')
+        service=Service(CHROMEDRIVER_PATH)
     )
 
     # Відкриваємо сторінку

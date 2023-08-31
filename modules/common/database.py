@@ -1,9 +1,13 @@
 import sqlite3
+import os
+from config.config import ROOT_DIR
 
 
 class Database():
     def __init__(self):
-        self.connection = sqlite3.connect(r'C:\\Users\\38098\\Alina-QA' + r'\\become_qa_auto.db')
+        db_path = os.path.join(ROOT_DIR, "become_qa_auto.db")
+
+        self.connection = sqlite3.connect(db_path)
         self.cursor = self.connection.cursor()
 
     def test_connection(self):

@@ -1,16 +1,15 @@
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
-
+import os
+from config.config import ROOT_DIR
 
 class BasePage:
-    PATH = "C:\\Users\\38098\\Alina-QA\\"
-    DRIVER_NAME = "chromedriver.exe"
+    CHROMEDRIVER_PATH = os.path.join(ROOT_DIR, "chromedriver.exe")
 
     def __init__(self) -> None:
         self.driver = webdriver.Chrome(
-    service=Service(BasePage.PATH + BasePage.DRIVER_NAME)
+    service=Service(BasePage.CHROMEDRIVER_PATH)
         )
-
     def go_to(self, url):
         self.driver.get(url)
 
